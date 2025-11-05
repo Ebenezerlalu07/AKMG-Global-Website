@@ -11,6 +11,15 @@ body {
 
 a {
   text-decoration: none !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif !important;
+}
+
+p {
+  font-family: "Poppins", sans-serif !important;
 }
 
 /* Container */
@@ -190,5 +199,160 @@ a {
   .navbar-brand,
   .navbar-toggler {
     order: unset;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("/Assets/banner 1.jpg") center/cover no-repeat;
+  filter: brightness(0.80);
+  z-index: -1;
+}
+
+.hero-text-box {
+  max-width: 650px;
+  text-align: left;
+}
+
+.hero-text-box h1 {
+  font-size: 2.7rem;
+  font-weight: 700;
+}
+
+.hero-text-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ========== BUTTONS ========== */
+.custom-btn {
+  padding: 9px 22px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 45px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.custom-btn i {
+  background: rgba(255, 255, 255, 0.85);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  color: #2f2f2f !important;
+  margin-left: -2px;
+}
+
+.btn-danger.custom-btn {
+  background-color: #F15D2A !important;
+  border-color: #F15D2A !important;
+}
+
+.btn-outline-light.custom-btn i {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.custom-btn:hover i {
+  background: #fff;
+}
+
+/* Bottom Info Bar */
+.info-strip-wrapper {
+  margin-top: -70px;
+  position: relative;
+  z-index: 5;
+}
+
+.info-strip {
+  background: linear-gradient(90deg, #003cbb, #ff5e17);
+  border-radius: 18px;
+  min-height: 120px;
+  padding: 30px 40px;
+}
+
+.info-strip i {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.info-strip i:hover {
+  opacity: 0.75;
+}
+
+/* ========== MOBILE VIEW FIXES ========== */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 120px 0 120px;
+    align-items: flex-start;
+    /* Push content top */
+  }
+
+  .hero-text-box {
+    text-align: left !important;
+    /* Always left */
+  }
+
+  .hero-text-box h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text-box p {
+    font-size: 0.9rem;
+  }
+
+  .btn-area {
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align buttons left */
+  }
+
+  .info-strip {
+    padding: 15px 15px;
+  }
+
+  .info-left,
+  .info-right {
+    justify-content: flex-start !important;
+    /* Left align bottom section */
+    text-align: left;
+  }
+
+  .info-left img {
+    margin-bottom: 6px;
+  }
+
+  .info-right {
+    gap: 12px;
+  }
+
+  .info-right .divider {
+    width: 2px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.8);
   }
 }
