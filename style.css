@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+.mobile-link i {
+  transition: .25s;
+}
+
+.mobile-link[aria-expanded="true"] i {
+  transform: rotate(180deg);
+}
 
 
 
@@ -235,7 +242,7 @@ p {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url("/Assets/banner 1.jpg") center/cover no-repeat;
+  background: url("/Assets/banner\ 1.jpg") center/cover no-repeat;
   filter: brightness(0.80);
   z-index: -1;
 }

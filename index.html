@@ -7,20 +7,11 @@
   <link rel="icon" type="image/x-icon" href="/Assets/Logo Only.jpg">
   <title>AKMG Global</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
   <link rel="stylesheet" href="/style.css">
+
 </head>
 
 <body>
@@ -28,7 +19,6 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm fixed-top">
     <div class="custom-container d-flex align-items-center justify-content-between">
-
       <a class="navbar-brand d-flex align-items-center m-0" href="/index.html">
         <img src="/Assets/logo.png" height="45">
       </a>
@@ -71,18 +61,17 @@
       <a class="login-btn d-none d-lg-flex align-items-center ms-3 btn btn-danger custom-btn" href="#">
         Login <i class="bi bi-arrow-up-right"></i>
       </a>
-
-
-
-
     </div>
   </nav>
 
+  <!-- Mobile Menu -->
   <div class="offcanvas offcanvas-top h-100 mobile-offcanvas" id="mobileMenu" style="top:70px;">
     <div class="offcanvas-body">
-      <a class="mobile-link" href="#">Home <i class="bi bi-arrow-right"></i></a>
 
-      <a class="mobile-link" data-bs-toggle="collapse" href="#aboutDrop">
+      <a class="mobile-link" href="/index.html">Home <i class="bi bi-arrow-right"></i></a>
+
+      <!-- Dropdown 1 -->
+      <a class="mobile-link collapsed" data-bs-toggle="collapse" data-bs-target="#aboutDrop">
         About <i class="bi bi-chevron-down"></i>
       </a>
       <div class="collapse ms-2" id="aboutDrop">
@@ -90,7 +79,8 @@
         <a class="mobile-sublink" href="#">Leadership</a>
       </div>
 
-      <a class="mobile-link" data-bs-toggle="collapse" href="#networkDrop">
+      <!-- Dropdown 2 -->
+      <a class="mobile-link collapsed" data-bs-toggle="collapse" data-bs-target="#networkDrop">
         Network <i class="bi bi-chevron-down"></i>
       </a>
       <div class="collapse ms-2" id="networkDrop">
@@ -108,49 +98,35 @@
           Login <i class="bi bi-arrow-up-right"></i>
         </a>
       </div>
-
     </div>
   </div>
 
-
-
-
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero-section position-relative">
     <div class="hero-bg"></div>
-
     <div class="custom-container">
       <div class="hero-text-box">
         <h1>Welcome to AKMG Global</h1>
-        <p>
-          An expanding network of Malayalee Doctors Beyond Borders providing an opportunity
-          to interact and connect globally
-        </p>
+        <p>An expanding network of Malayalee Doctors Beyond Borders providing an opportunity
+          to interact and connect globally</p>
 
         <div class="d-flex gap-3 btn-area mt-4 flex-wrap">
-          <a href="#" class="btn btn-danger custom-btn">
-            Join Network <i class="bi bi-arrow-up-right"></i>
-          </a>
-
-          <a href="#" class="btn btn-outline-light custom-btn">
-            Contact Now <i class="bi bi-arrow-up-right"></i>
-          </a>
+          <a href="#" class="btn btn-danger custom-btn">Join Network <i class="bi bi-arrow-up-right"></i></a>
+          <a href="#" class="btn btn-outline-light custom-btn">Contact Now <i class="bi bi-arrow-up-right"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Bottom Gradient Info Bar -->
+  <!-- Bottom strip -->
   <section class="info-strip-wrapper">
     <div class="custom-container">
       <div class="info-strip d-flex justify-content-between align-items-center flex-wrap gap-3">
-
         <div class="d-flex align-items-center gap-3 text-white info-left">
-          <img src="/Assets/Logo Only.jpg" width="55" alt="logo">
-          <p class="left mb-0 small">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum<br>
-            has been the industry's standard dummy text ever since the 1500s
-          </p>
+          <img src="/Assets/Logo Only.jpg" width="55">
+          <p class="left mb-0 small">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum <br>
+            has been the industry's standard dummy text ever since the 1500s</p>
         </div>
 
         <div class="d-flex align-items-center gap-3 text-white info-right">
@@ -160,38 +136,22 @@
           <i class="bi bi-youtube"></i>
           <i class="bi bi-linkedin"></i>
         </div>
-
-
       </div>
     </div>
   </section>
 
-
-
-
-
-
-
-
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.querySelectorAll(".mobile-link[data-bs-toggle='collapse']").forEach(function (item) {
-      item.addEventListener("click", function (e) {
-        let target = document.querySelector(this.getAttribute("href"));
 
-        // toggle manually
-        if (target.classList.contains("show")) {
-          new bootstrap.Collapse(target, { toggle: true }).hide();
-          this.querySelector("i").classList.remove("rotate-icon");
-        } else {
-          new bootstrap.Collapse(target, { toggle: true }).show();
-          this.querySelector("i").classList.add("rotate-icon");
-        }
+  <!-- ✅ Fix Mobile Dropdown Toggle -->
+  <script>
+    document.querySelectorAll(".mobile-link[data-bs-toggle='collapse']").forEach(el => {
+      el.addEventListener("click", function (e) {
+        const target = document.querySelector(this.getAttribute("data-bs-target"));
+        const instance = bootstrap.Collapse.getOrCreateInstance(target);
+        instance.toggle();
       });
     });
   </script>
-
 
 </body>
 
