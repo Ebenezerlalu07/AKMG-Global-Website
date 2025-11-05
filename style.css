@@ -307,7 +307,7 @@ p {
 @media (max-width: 768px) {
   .hero-section {
     height: auto;
-    padding: 120px 0 120px;
+    padding: 190px 0 190px;
     align-items: flex-start;
     /* Push content top */
   }
