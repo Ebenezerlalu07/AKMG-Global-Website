@@ -23,7 +23,7 @@
   transform: translateY(0);
 }
 
-/* ===== Loader Styles ===== */
+/* Loader styles */
 #loader {
   position: fixed;
   top: 0;
@@ -31,66 +31,41 @@
   width: 100%;
   height: 100%;
   background: #fff;
-  /* Background color */
+  /* You can use black (#000) if your site is dark */
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
   z-index: 9999;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
-/* Loader Content */
-.loader-content {
-  text-align: center;
-}
-
-/* Logo Styling */
+/* Logo animation */
 .loader-logo {
-  width: 100px;
+  width: 120px;
   height: auto;
-  margin-bottom: 20px;
-  animation: logoPulse 2s infinite ease-in-out;
+  animation: pulse 1.5s infinite ease-in-out;
 }
 
-/* Spinner Ring */
-.spinner {
-  width: 60px;
-  height: 60px;
-  border: 5px solid #d9d9d9;
-  border-top: 5px solid #28a745;
-  /* Your green brand color */
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-/* Animations */
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes logoPulse {
+/* Simple pulse animation */
+@keyframes pulse {
 
   0%,
   100% {
     transform: scale(1);
-    opacity: 1;
+    opacity: 0.9;
   }
 
   50% {
-    transform: scale(1.05);
-    opacity: 0.8;
+    transform: scale(1.1);
+    opacity: 1;
   }
 }
 
-/* Fade-out effect */
+/* Fade out animation */
 #loader.fade-out {
   opacity: 0;
   visibility: hidden;
 }
-
 
 
 /* FONT */
