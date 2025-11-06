@@ -12,6 +12,84 @@
   transform: rotate(180deg);
 }
 
+.text-transition {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.text-transition.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Loader Styles ===== */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  /* Background color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+/* Loader Content */
+.loader-content {
+  text-align: center;
+}
+
+/* Logo Styling */
+.loader-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: logoPulse 2s infinite ease-in-out;
+}
+
+/* Spinner Ring */
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid #d9d9d9;
+  border-top: 5px solid #28a745;
+  /* Your green brand color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes logoPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+/* Fade-out effect */
+#loader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
 
 
 
@@ -128,6 +206,8 @@ p {
   justify-content: flex-start;
   padding-left: 20px;
 }
+
+
 
 /* MOBILE MENU */
 .offcanvas {
@@ -417,6 +497,14 @@ p {
 
 
 
+
+
+
+
+
+
+
+/* --- ABOUT SECTION --- */
 .about-akmg .about-title {
   font-size: 32px;
   font-weight: 700;
@@ -425,34 +513,28 @@ p {
 
 .about-akmg .about-desc {
   font-size: 15px;
-  line-height: 1.6;
-}
-
-.about-img {
-  border-radius: 18px;
+  line-height: 1.7;
+  color: #333;
 }
 
 .about-img {
   width: 100%;
-  height: 400px;
-  /* reduce height */
+  height: 350px;
   object-fit: cover;
-  /* keeps proper crop */
   border-radius: 18px;
+  transition: transform 0.4s ease;
 }
 
-/* Mobile adjust */
-@media (max-width: 768px) {
-  .about-img {
-    height: 300px;
-    /* smaller for mobile */
-  }
+.about-img:hover {
+  transform: scale(1.03);
 }
 
+/* --- STAT CARD BASE --- */
+.stat-wrapper {
+  margin-top: 1.5rem;
+}
 
-/* STAT CARD */
 .stat-box {
-  background: #1E3D9A;
   border-radius: 20px;
   padding: 30px 22px;
   color: #fff;
@@ -462,34 +544,34 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transition: all .35s ease;
+  transition: all 0.35s ease;
+  background-color: #1E3D9A;
+  overflow: hidden;
 }
 
-/* Bigger Poppins Medium stat numbers */
-.stat-box h3 {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 500 !important;
-  /* Medium */
-  font-size: 60px !important;
-  /* Increase size */
-  line-height: 1.1;
+/* --- CARD COLORS --- */
+.card-blue {
+  background-color: #274193;
 }
 
-
-.stat-box.orange {
-  background: #F15A24;
+.card-green {
+  background-color: #F15D2A;
 }
 
-/* Hover */
+.card-purple {
+  background-color: #274193;
+}
+
+/* --- Hover effect --- */
 .stat-box:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Arrow icon circle */
+/* --- ICON --- */
 .stat-icon {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #ffffff;
   color: #1E3D9A;
@@ -500,31 +582,102 @@ p {
   position: absolute;
   top: 14px;
   right: 14px;
+  transition: all 0.3s ease;
+  z-index: 2;
 }
 
-/* Typography */
+/* --- TYPOGRAPHY --- */
 .stat-box h3 {
-  font-size: 36px;
-  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 42px;
   margin: 0;
+  line-height: 1.1;
 }
 
 .stat-box p {
   font-size: 15px;
   margin: 5px 0 0;
+  opacity: 0.9;
 }
 
-/* MOBILE */
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .about-akmg .about-title {
+    font-size: 28px;
+  }
+
+  .about-img {
+    height: 350px;
+  }
+
+  .stat-box h3 {
+    font-size: 34px;
+  }
+}
+
 @media (max-width: 768px) {
   .about-akmg .about-title {
     font-size: 26px;
   }
 
+  .about-img {
+    height: 280px;
+  }
+
   .stat-box {
     min-height: 140px;
+    text-align: left;
+    padding: 28px 20px;
+  }
+
+  .stat-icon {
+    top: 10px;
+    right: 12px;
   }
 
   .stat-box h3 {
     font-size: 30px;
+    margin-top: 10px;
+  }
+
+  .stat-box p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  /* --- Reduce spacing between cards --- */
+  .stat-wrapper {
+    row-gap: 0.3rem !important;
+    /* tighter gap */
+    margin-top: 0.8rem;
+  }
+
+  .col-12 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .stat-box {
+    min-height: 120px;
+    padding: 22px 16px 16px;
+  }
+
+  .stat-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .stat-box h3 {
+    font-size: 35px;
+  }
+
+  .stat-box p {
+    font-size: 13px;
   }
 }
