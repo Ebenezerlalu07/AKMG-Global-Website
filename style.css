@@ -41,7 +41,7 @@
 
 /* Logo animation */
 .loader-logo {
-  width: 120px;
+  width: 80px;
   height: auto;
   animation: pulse 1.5s infinite ease-in-out;
 }
