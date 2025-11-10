@@ -126,62 +126,6 @@ p {
   margin-left: 4px;
 }
 
-/* LOGIN BUTTON */
-.login-btn {
-  background: #F15D2A;
-  padding: 10px 24px 10px 20px;
-  border-radius: 40px;
-  color: #fff;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 130px;
-  justify-content: flex-start;
-  transition: .2s;
-}
-
-.login-btn:hover {
-  background: #ff6a36;
-}
-
-/* White circle - fixed */
-.login-btn i {
-  background: #fff;
-  color: black;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  position: absolute;
-  right: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ✅ Animate only the arrow icon inside */
-.login-btn i::before {
-  transition: .25s ease;
-}
-
-
-/* Mobile login wrapper */
-.mobile-login-wrapper {
-  margin-top: 20px;
-  text-align: center;
-}
-
-/* Mobile login full width */
-.mobile-login-btn {
-  width: 100%;
-  justify-content: flex-start;
-  padding-left: 20px;
-}
-
 
 
 /* MOBILE MENU */
