@@ -970,26 +970,17 @@ p {
 
 
 
-
-.global-video-section {
+/* Section with background image */
+.global-video-section.image-bg {
   position: relative;
   width: 100%;
   height: 50vh;
-  /* Full screen */
+  background-image: url('/Assets/Global.jpg');
+  /* <-- ADD YOUR IMAGE HERE */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
-}
-
-/* Background video */
-.bg-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
 }
 
 /* Dark overlay */
@@ -1003,17 +994,16 @@ p {
   z-index: 1;
 }
 
-/* Text container */
+/* Text content */
 .video-content {
   position: absolute;
   bottom: 60px;
-  /* push text to bottom */
   width: 100%;
   z-index: 2;
   padding: 0 20px;
 }
 
-/* Headline */
+/* Title */
 .video-content .title {
   font-size: 48px;
   font-weight: 500;
@@ -1028,7 +1018,7 @@ p {
   margin: 0 auto;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
   .video-content .title {
     font-size: 32px;
@@ -1038,11 +1028,6 @@ p {
     font-size: 15px;
   }
 }
-
-
-
-
-
 
 
 
@@ -1063,7 +1048,7 @@ p {
    LOGO & PARAGRAPH
 ---------------------------- */
 .footer-logo {
-  width: 260px;
+  width: 300px;
   max-width: 100%;
   height: auto;
   object-fit: contain;
@@ -1118,27 +1103,38 @@ p {
 }
 
 /* ---------------------------
-   SOCIAL ICONS — NEW DESIGN
+   SOCIAL ICONS
 ---------------------------- */
+.social-icons {
+  display: flex;
+  flex-wrap: nowrap !important;
+  gap: 8px;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 6px;
+}
+
+.social-icons::-webkit-scrollbar {
+  display: none;
+}
+
 .social-icons a {
+  flex: 0 0 auto !important;
   width: 40px;
   height: 40px;
   background: #efefef;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: 8px;
   border-radius: 50%;
-  font-size: 18px;
-  color: #333 !important;
-  transition: 0.3s ease;
+  font-size: 20px;
+  color: #3F3F3F !important;
+  transition: 0.25s ease;
 }
 
-/* Hover */
 .social-icons a:hover {
   background: #f15a24;
   color: #fff !important;
-  transform: translateY(-3px);
 }
 
 /* ---------------------------
@@ -1150,7 +1146,7 @@ p {
 }
 
 /* ---------------------------
-   BOTTOM COPYRIGHT
+   COPYRIGHT BOTTOM
 ---------------------------- */
 .footer-bottom {
   font-size: 14px;
@@ -1167,71 +1163,118 @@ p {
   color: #f15a24 !important;
 }
 
+/* Horizontal scroll for link line */
+.footer-bottom .d-flex {
+  flex-wrap: nowrap !important;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 22px;
+}
 
+.footer-bottom .d-flex::-webkit-scrollbar {
+  display: none;
+}
 
 /* ---------------------------
-   RESPONSIVE
+   TABLET
 ---------------------------- */
-
-/* ---------------------------
-   KEEP GRID ARRANGEMENT
-   (Only spacing & scaling improved)
----------------------------- */
-
-/* Tablet & Mobile */
-@media (max-width: 768px) {
-
-  /* Keep rows aligned left */
+@media (max-width: 992px) {
   .footer-right {
-    justify-content: flex-start;
-    gap: 30px;
-  }
-
-  .footer-block {
-    min-width: 140px;
-    /* Keeps proper grid shape */
-  }
-
-  .footer-block h6 {
-    font-size: 14px;
-  }
-
-  /* Social icons */
-  .social-icons a {
-    width: 38px;
-    height: 38px;
-    font-size: 18px;
-    margin-right: 6px;
-  }
-
-  /* Logo smaller but not centered */
-  .footer-logo {
-    width: 220px;
+    gap: 32px;
   }
 }
 
-/* Smallest screens */
-@media (max-width: 480px) {
+/* ---------------------------
+   MOBILE (UPDATED)
+---------------------------- */
+@media (max-width: 576px) {
 
+  .custom-container {
+    width: 92% !important;
+  }
+
+  /* Reduce general footer font size */
+  .footer-desc,
+  .footer-text,
+  .footer-list a {
+    font-size: 13px !important;
+  }
+
+  /* Smaller section titles */
+  .footer-block h6 {
+    font-size: 14px !important;
+  }
+
+  /* Footer layout */
   .footer-right {
-    gap: 24px;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    gap: 20px;
   }
 
   .footer-block {
     width: 45%;
-    /* Keeps tidy 2-column grid on mobile */
+    min-width: 130px;
   }
 
+  /* Smaller social icons */
   .social-icons a {
-    width: 40px;
-    height: 40px;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 16px !important;
+    margin-right: 8px;
+  }
+
+  /* Divider spacing */
+  .footer-line {
+    margin: 20px 0;
+  }
+
+  /* Copyright layout */
+  .footer-bottom {
+    font-size: 12px !important;
+    gap: 8px;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .footer-bottom>div:first-child {
+    width: 100%;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  /* ------------------------------------
+     REDUCED SIZE (ONLY 3 LINKS)
+     All Rights Reserved
+     Terms and conditions
+     Cookies Policy
+  ------------------------------------ */
+  .footer-bottom .d-flex a {
+    font-size: 11px !important;
+  }
+
+  /* Smaller gap between links */
+  .footer-bottom .d-flex {
+    gap: 12px !important;
+    padding: 4px 0;
+    white-space: nowrap !important;
+    overflow-x: auto !important;
+    justify-content: center !important;
+  }
+
+  .footer-bottom .d-flex::-webkit-scrollbar {
+    display: none;
   }
 }
 
-/* Extra small screens */
+/* ---------------------------
+   EXTRA SMALL SCREENS
+---------------------------- */
 @media (max-width: 360px) {
-
   .footer-block {
     width: 48%;
   }
