@@ -337,6 +337,36 @@ p {
   transition: color 0.3s ease;
 }
 
+/* Mobile Responsive Button Fix */
+@media (max-width: 576px) {
+
+  .custom-btn {
+    padding: 7px 16px;
+    /* smaller padding */
+    font-size: 14px;
+    /* smaller font */
+    border-radius: 35px;
+    /* smaller pill radius */
+    gap: 4px;
+  }
+
+  .icon-round {
+    width: 28px;
+    /* smaller circle */
+    height: 28px;
+    left: 5px;
+    /* reduce shift */
+    margin-left: 3px;
+  }
+
+  .lucide-icon {
+    width: 16px;
+    /* smaller icon */
+    height: 16px;
+  }
+}
+
+
 /* Hover only for this button */
 .contact-btn:hover .icon-round {
   background: #F15D2A !important;
