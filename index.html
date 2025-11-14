@@ -175,7 +175,7 @@
         </div>
 
         <div class="col-lg-7 about-akmg">
-          <h2 class="about-title ">About AKMG Global</h2>
+          <h2 class="about-title ">About <span class="fw-bold"> AKMG Global</span></h2>
           <p class="about-desc">
             The <strong>Association of Kerala Medical and Dental Graduates</strong> (AKMG) Global is a global networking
             platform that unites medical and dental professionals with Keralan origin from all over the world. The group
@@ -280,6 +280,251 @@
 
 
 
+
+  <section class="why-join-section py-4">
+    <div class="custom-container">
+
+      <!-- TITLE + BUTTONS -->
+      <div class="d-flex justify-content-between align-items-start mb-4 flex-wrap gap-2">
+        <div>
+          <h2 class="about-title ">Why <span class="text-dark"> <span class="fw-bold">Join ?</span></span></h2>
+          <p class="why-subtext">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been industry's standard dummy text ever since the 1500s.
+          </p>
+        </div>
+
+        <!-- ARROWS -->
+        <div class="d-flex gap-3">
+          <button class="nav-btn prev-slide"><i class="bi bi-arrow-left"></i></button>
+          <button class="nav-btn next-slide"><i class="bi bi-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- SLIDER WRAPPER -->
+      <div class="slider-wrapper">
+        <div class="slider-track">
+
+          <!-- CARD 1 -->
+          <div class="slide-card bg-light-green">
+            <img src="/Assets/Network connection.png" class="card-icon">
+            <div>
+              <h2 class="card-title">Network Connection</h2>
+              <p>Lorem Ipsum is simply dummy<br>
+                text of the printing.</p>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="slide-card bg-light-orange">
+            <img src="/Assets/Professional Connect.png" class="card-icon">
+            <div>
+              <h2 class="card-title">Professional Connect</h2>
+              <p>Lorem Ipsum is simply dummy<br>
+                text of the printing.</p>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="slide-card bg-light-blue">
+            <img src="/Assets/Cultural Connect.png" class="card-icon">
+            <div>
+              <h2 class="card-title">Cultural Connect</h2>
+              <p>Lorem Ipsum is simply dummy<br>
+                text of the printing.</p>
+            </div>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="slide-card bg-light-green">
+            <img src="/Assets/Social connect.png  " class="card-icon">
+            <div>
+              <h2 class="card-title">Business Connect</h2>
+              <p>Lorem Ipsum is simply dummy<br>
+                text of the printing.</p>
+            </div>
+          </div>
+
+          <!-- CARD 5 -->
+          <div class="slide-card bg-light-orange">
+            <img src="/Assets/Advocacy Connect.png" class="card-icon">
+            <div>
+              <h2 class="card-title">Medical Connect</h2>
+              <p>Lorem Ipsum is simply dummy<br>
+                text of the printing.</p>
+            </div>
+          </div>
+
+          <!-- CARD 6 -->
+          <div class="slide-card bg-light-blue">
+            <img src="/Assets/Philanthropy Connect.png" class="card-icon">
+            <div>
+              <h2 class="card-title">Community Connect</h2>
+              <p>Lorem Ipsum is simply dummy<br>
+                text of the printing.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section><br>
+
+
+  <script>
+    let currentSlide = 0;
+    const track = document.querySelector(".slider-track");
+    const cards = document.querySelectorAll(".slide-card");
+    const totalCards = cards.length;
+
+    // cards per slide based on screen
+    function cardsPerView() {
+      if (window.innerWidth < 576) return 1;
+      if (window.innerWidth < 992) return 2;
+      return 3;
+    }
+
+    function updateSlider() {
+      const cardWidth = cards[0].offsetWidth + 20;
+      const moveX = currentSlide * cardWidth * cardsPerView();
+      track.style.transform = `translateX(-${moveX}px)`;
+    }
+
+    document.querySelector(".next-slide").addEventListener("click", () => {
+      if (currentSlide < Math.ceil(totalCards / cardsPerView()) - 1) {
+        currentSlide++;
+        updateSlider();
+      }
+    });
+
+    document.querySelector(".prev-slide").addEventListener("click", () => {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateSlider();
+      }
+    });
+
+    // reset on resize
+    window.addEventListener("resize", () => {
+      currentSlide = 0;
+      updateSlider();
+    });
+  </script>
+
+
+
+
+
+  <section class="global-video-section">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="/Assets/0_Earth_Night_1920x1080 (1).mp4" type="video/mp4">
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <div class="video-content text-center">
+      <h5 class="title">We are Global</h5>
+      <p class="subtitle">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+      </p>
+    </div>
+  </section>
+
+
+
+
+
+
+  <footer class="site-footer py-5">
+    <div class="custom-container">
+
+      <div class="row gy-4">
+
+        <!-- LEFT: Logo + paragraph -->
+        <div class="col-12 col-md-4">
+          <img src="/Assets/logo.png" alt="AKMG Logo" class="footer-logo mb-3">
+
+          <p class="footer-desc mb-0">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been.
+          </p>
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="col-12 col-md-8">
+          <div class="footer-right d-flex justify-content-between flex-wrap">
+
+            <!-- Quick Links 1 -->
+            <div class="footer-block">
+              <h6>Quick Links</h6>
+              <ul class="footer-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Network</a></li>
+              </ul>
+            </div>
+
+            <!-- Quick Links 2 -->
+            <div class="footer-block">
+              <h6>Quick Links</h6>
+              <ul class="footer-list">
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Media</a></li>
+              </ul>
+            </div>
+
+            <!-- Secretariat -->
+            <div class="footer-block">
+              <h6>Secretariat</h6>
+              <p class="footer-text mb-0">
+                Sharjah Healthcare City<br>
+                P O Box 40466<br>
+                Sharjah, UAE
+              </p>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-block">
+              <h6>Contact Us</h6>
+              <p class="footer-text mb-1">+971 8 519 5566</p>
+              <p class="footer-text mb-0">info@akmgglobal.org</p>
+            </div>
+
+            <!-- Modern Social Icons -->
+            <div class="footer-block">
+              <h6>Connect Social</h6>
+
+              <div class="social-icons mt-2">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="footer-line">
+
+      <!-- BOTTOM COPYRIGHT -->
+      <div class="footer-bottom d-flex justify-content-between flex-wrap text-center text-md-start">
+        <div>© Copyright Therapeo Healthcare Consultancy FZ LLC</div>
+
+        <div class="d-flex gap-4 flex-wrap">
+          <a href="#">All Rights Reserved</a>
+          <a href="#">Terms and conditions</a>
+          <a href="#">Cookies Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
 
 
 

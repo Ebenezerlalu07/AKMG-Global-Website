@@ -97,9 +97,17 @@ p {
 
 /* Container */
 .custom-container {
-  width: 90%;
+  width: 80%;
   margin: auto;
 }
+
+/* Mobile screens */
+@media (max-width: 576px) {
+  .custom-container {
+    width: 90% !important;
+  }
+}
+
 
 
 
@@ -493,7 +501,7 @@ p {
 /* --- ABOUT SECTION --- */
 .about-akmg .about-title {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 12px;
 }
 
@@ -854,5 +862,377 @@ p {
 
   .why-title {
     font-size: 24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* TEXT */
+.why-subtext {
+  max-width: 750px;
+  color: #555;
+}
+
+/* CARDS SLIDER */
+.slider-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* CARD STYLING */
+.slide-card {
+  flex: 0 0 calc(33.333% - 20px);
+  margin-right: 20px;
+  padding: 35px;
+  /* increased padding */
+  border-radius: 22px;
+  /* slightly larger rounding */
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 150px;
+  /* 🔥 increased from 150px → 200px */
+}
+
+
+.card-icon {
+  width: 55px;
+  height: 55px;
+}
+
+/* COLORS */
+.bg-light-green {
+  background: #eaf7ef;
+}
+
+.bg-light-orange {
+  background: #fdece7;
+}
+
+.bg-light-blue {
+  background: #eaecf7;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ARROWS */
+.nav-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #f15a24;
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #d94815;
+  /* darker hover */
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .slide-card {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 575px) {
+  .slide-card {
+    flex: 0 0 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+.global-video-section {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  /* Full screen */
+  overflow: hidden;
+}
+
+/* Background video */
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* Dark overlay */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+/* Text container */
+.video-content {
+  position: absolute;
+  bottom: 60px;
+  /* push text to bottom */
+  width: 100%;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+/* Headline */
+.video-content .title {
+  font-size: 48px;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Subtitle */
+.video-content .subtitle {
+  font-size: 18px;
+  color: #e8e8e8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .video-content .title {
+    font-size: 32px;
+  }
+
+  .video-content .subtitle {
+    font-size: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------
+   FOOTER BASE
+---------------------------- */
+.site-footer {
+  background: #fff;
+  padding: 48px 0 28px;
+  color: #222;
+  font-family: "Inter", sans-serif;
+}
+
+/* ---------------------------
+   LOGO & PARAGRAPH
+---------------------------- */
+.footer-logo {
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-desc {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ---------------------------
+   TITLES
+---------------------------- */
+.footer-block h6 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* ---------------------------
+   LIST LINKS
+---------------------------- */
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 8px;
+}
+
+.footer-list a {
+  color: #333;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.footer-list a:hover {
+  color: #f15a24 !important;
+}
+
+/* ---------------------------
+   BASIC TEXT BLOCKS
+---------------------------- */
+.footer-text {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ---------------------------
+   SOCIAL ICONS — NEW DESIGN
+---------------------------- */
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background: #efefef;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #333 !important;
+  transition: 0.3s ease;
+}
+
+/* Hover */
+.social-icons a:hover {
+  background: #f15a24;
+  color: #fff !important;
+  transform: translateY(-3px);
+}
+
+/* ---------------------------
+   DIVIDER LINE
+---------------------------- */
+.footer-line {
+  border-top: 1px solid #ddd;
+  margin: 32px 0;
+}
+
+/* ---------------------------
+   BOTTOM COPYRIGHT
+---------------------------- */
+.footer-bottom {
+  font-size: 14px;
+  color: #444;
+}
+
+.footer-bottom a {
+  color: #333;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.footer-bottom a:hover {
+  color: #f15a24 !important;
+}
+
+
+
+/* ---------------------------
+   RESPONSIVE
+---------------------------- */
+
+/* ---------------------------
+   KEEP GRID ARRANGEMENT
+   (Only spacing & scaling improved)
+---------------------------- */
+
+/* Tablet & Mobile */
+@media (max-width: 768px) {
+
+  /* Keep rows aligned left */
+  .footer-right {
+    justify-content: flex-start;
+    gap: 30px;
+  }
+
+  .footer-block {
+    min-width: 140px;
+    /* Keeps proper grid shape */
+  }
+
+  .footer-block h6 {
+    font-size: 14px;
+  }
+
+  /* Social icons */
+  .social-icons a {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+    margin-right: 6px;
+  }
+
+  /* Logo smaller but not centered */
+  .footer-logo {
+    width: 220px;
+  }
+}
+
+/* Smallest screens */
+@media (max-width: 480px) {
+
+  .footer-right {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .footer-block {
+    width: 45%;
+    /* Keeps tidy 2-column grid on mobile */
+  }
+
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+
+  .footer-block {
+    width: 48%;
   }
 }
