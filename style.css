@@ -95,6 +95,7 @@ p {
 }
 
 
+
 /* Container */
 .custom-container {
   width: 80%;
@@ -308,6 +309,7 @@ p {
 
 
 
+
 .custom-btn {
   padding: 9px 22px;
   font-size: 15px;
@@ -319,6 +321,7 @@ p {
   position: relative;
   overflow: hidden;
 }
+
 
 
 
@@ -388,17 +391,17 @@ p {
 
 
 
-
-
-
-
-
-
-
 .btn-danger.custom-btn {
   background-color: #F15D2A !important;
   border-color: #F15D2A !important;
 }
+
+.btn-danger.custom-btn:hover {
+  background-color: #EA4E19 !important;
+  border-color: #EA4E19 !important;
+}
+
+
 
 
 
@@ -478,8 +481,6 @@ p {
     background: rgba(255, 255, 255, 0.8);
   }
 }
-
-
 
 
 
@@ -583,7 +584,7 @@ p {
 /* --- TYPOGRAPHY --- */
 .stat-box h3 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 42px;
   margin: 0;
   line-height: 1.1;
@@ -593,6 +594,47 @@ p {
   font-size: 15px;
   margin: 5px 0 0;
   opacity: 0.9;
+}
+
+/* --- CUSTOM DESKTOP CARD WIDTHS + REDUCED GAP --- */
+@media (min-width: 992px) {
+  .stat-wrapper {
+    display: flex;
+    gap: 10px !important;
+    /* reduced spacing */
+    align-items: stretch;
+  }
+
+  .stat-wrapper .col-md-4 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* 1st card → 25% (updated) */
+  .stat-wrapper .col-md-4:nth-child(1) {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  /* 2nd card → 30% */
+  .stat-wrapper .col-md-4:nth-child(2) {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+
+  /* 3rd card → 40% */
+  .stat-wrapper .col-md-4:nth-child(3) {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+}
+
+/* Mobile & tablet full width */
+@media (max-width: 991px) {
+  .stat-wrapper .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 /* --- RESPONSIVE --- */
@@ -641,11 +683,8 @@ p {
 }
 
 @media (max-width: 576px) {
-
-  /* --- Reduce spacing between cards --- */
   .stat-wrapper {
     row-gap: 0.3rem !important;
-    /* tighter gap */
     margin-top: 0.8rem;
   }
 
@@ -675,6 +714,7 @@ p {
     font-size: 13px;
   }
 }
+
 
 
 
