@@ -1181,8 +1181,13 @@ p {
    DIVIDER LINE
 ---------------------------- */
 .footer-line {
-  border-top: 1px solid #ddd;
+  border: none;
+  border-top: 1px solid #3F3F3F;
   margin: 32px 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* ---------------------------
