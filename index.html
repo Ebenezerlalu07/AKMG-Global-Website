@@ -124,16 +124,16 @@
           to interact and connect globally</p>
 
         <div class="d-flex gap-3 btn-area  flex-wrap">
+
           <a href="#" class="btn btn-danger custom-btn d-inline-flex align-items-center gap-2" data-bs-toggle="modal"
             data-bs-target="#joinNetworkModal">
-
             Join Network
-
-            <div class="icon-round d-flex justify-content-center align-items-center">
+            <div class="icon-round">
               <i data-lucide="arrow-up-right" class="lucide-icon"></i>
             </div>
-
           </a>
+
+
 
 
           <a href="#" class="btn btn-outline-light custom-btn contact-btn">
@@ -150,259 +150,14 @@
 
 
 
-  <!-- ==========================
-     POPUP MODAL
-=========================== -->
-  <div class="modal fade" id="joinNetworkModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered custom-modal">
-      <div class="modal-content custom-content">
-
-        <button type="button" class="btn-close custom-close" data-bs-dismiss="modal"></button>
-
-        <div class="popup-expanded">
-
-          <!-- LEFT (FORM) -->
-          <div class="popup-left">
-            <h1 class="modal-title">Join The <span class="highlight">Network</span></h1>
-            <p class="modal-sub">Fill out the form below, and we'll get back to you soon</p>
-
-            <form>
-              <div class="mb-4">
-                <input type="text" class="form-control" placeholder="Full Name">
-              </div>
-              <div class="mb-4">
-                <input type="email" class="form-control" placeholder="Email">
-              </div>
-              <div class="mb-4">
-                <input type="text" class="form-control" placeholder="Whatsapp Number (With Country Code*)">
-              </div>
-              <div class="mb-4">
-                <input type="text" class="form-control" placeholder="Specify Field (Dental/Medical)">
-              </div>
-
-              <div class="form-check checkbox-row">
-                <input class="form-check-input" type="checkbox" id="confirmCheck">
-                <label class="form-check-label ms-2" for="confirmCheck">
-                  I confirm that I am a non-doctor and eligible to join this program.
-                </label>
-              </div>
-
-              <div class="d-flex gap-3">
-                <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-primary custom">Submit</button>
-              </div>
-            </form>
-          </div>
-
-          <!-- RIGHT (IMAGE) -->
-          <div class="popup-right"></div>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
 
 
-  <style>
-    /* =========================================
-   ROOT VARIABLES
-========================================= */
-    :root {
-      --popup-radius: 20px;
-      --accent-green: #39b54a;
-      --accent-orange: #f26627;
-      --muted: #6b6b6b;
-    }
 
-    /* =========================================
-   SECTION CENTERING
-========================================= */
-    .join-network-section {
-      text-align: center;
-      padding: 80px 0;
-    }
 
-    /* =========================================
-   MODAL SIZE (Centered + Wide)
-========================================= */
-    .modal-dialog.custom-modal {
-      max-width: 1400px !important;
-      width: 100%;
-      margin: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
 
-    .modal-content.custom-content {
-      width: 100%;
-      max-width: 1400px;
-      margin: auto;
-      border-radius: var(--popup-radius);
-      overflow: hidden;
-      border: 0;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-      display: flex;
-    }
 
-    /* =========================================
-   INNER CONTENT HEIGHT & CENTER
-========================================= */
-    .popup-expanded {
-      min-height: 650px;
-      display: flex;
-      align-items: stretch;
-    }
+  
 
-    /* =========================================
-   LEFT PANEL (FORM — 60%)
-========================================= */
-    .popup-left {
-      width: 60% !important;
-      padding: 60px 80px;
-      background: #fff;
-    }
-
-    h1.modal-title {
-      font-size: 38px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    h1 .highlight {
-      font-weight: 800;
-    }
-
-    .modal-sub {
-      color: var(--muted);
-      margin-bottom: 28px;
-    }
-
-    /* Form input fields */
-    .form-control {
-      border: 0;
-      border-bottom: 1px solid #ccc;
-      border-radius: 0;
-      height: 44px;
-      padding-left: 0;
-      padding-right: 0;
-      box-shadow: none;
-    }
-
-    .form-control:focus {
-      border-color: #999;
-      box-shadow: none;
-    }
-
-    /* Checkbox text */
-    .checkbox-row {
-      margin-top: 18px;
-      margin-bottom: 22px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* =========================================
-   RIGHT PANEL (IMAGE — 40%)
-========================================= */
-    .popup-right {
-      width: 40% !important;
-      background-image: url('/Assets/Join\ the\ network\ form\ img.png');
-      background-size: cover;
-      background-position: center;
-    }
-
-    /* =========================================
-   CLOSE BUTTON — LEFT TOP + HOVER RED
-========================================= */
-    .btn-close.custom-close {
-      position: absolute;
-      left: 25px;
-      top: 25px;
-      width: 36px;
-      height: 36px;
-      opacity: 1;
-      background: none !important;
-      border: 0;
-      font-size: 28px;
-      color: #000;
-      transition: 0.3s ease;
-    }
-
-    .btn-close.custom-close::after {
-      content: "✕";
-    }
-
-    .btn-close.custom-close:hover {
-      color: red !important;
-      transform: scale(1.1);
-    }
-
-    /* =========================================
-   BUTTONS
-========================================= */
-    .btn-ghost {
-      background: var(--accent-orange);
-      border-radius: 25px;
-      padding: 10px 26px;
-      color: #fff;
-      border: 0;
-    }
-
-    .btn-primary.custom {
-      background: var(--accent-green);
-      border-radius: 25px;
-      padding: 10px 26px;
-      border: 0;
-    }
-
-    /* =========================================
-   RESPONSIVE (TABLET)
-========================================= */
-    @media(max-width:991px) {
-      .popup-left {
-        padding: 40px 50px;
-      }
-    }
-
-    /* =========================================
-   RESPONSIVE (MOBILE)
-========================================= */
-    @media(max-width:768px) {
-
-      .modal-dialog.custom-modal {
-        max-width: 100% !important;
-        margin: 10px;
-      }
-
-      .modal-content.custom-content {
-        max-width: 100%;
-        flex-direction: column;
-      }
-
-      .popup-left {
-        width: 100% !important;
-        padding: 35px 25px;
-      }
-
-      .popup-right {
-        display: none !important;
-      }
-
-      .popup-expanded {
-        min-height: auto !important;
-      }
-
-      h1.modal-title {
-        font-size: 28px !important;
-      }
-
-      .form-control {
-        height: 40px;
-      }
-    }
-  </style>
 
 
 
