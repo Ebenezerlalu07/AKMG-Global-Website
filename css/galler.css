@@ -1,0 +1,102 @@
+/* ===========================
+   HERO BANNER
+=========================== */
+.akmg-hero {
+    position: relative;
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+}
+
+.akmg-hero .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CENTER TITLE IN MIDDLE */
+.hero-text-center {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.hero-text-center h1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* MOBILE HERO */
+@media (max-width: 768px) {
+    .akmg-hero {
+        height: 35vh;
+    }
+
+    .hero-text-center h1 {
+        font-size: 1.9rem;
+    }
+}
+
+/* ===========================
+   MAIN LAUNCH SECTION
+=========================== */
+.akmg-launch-section h2 {
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.akmg-launch-section .highlight {
+    color: #000;
+    font-weight: 700;
+}
+
+/* ===========================
+   GALLERY CARDS
+=========================== */
+.gallery-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    transition: 0.3s all ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery Image */
+.gallery-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+/* Caption */
+.gallery-caption {
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+}
+
+/* MOBILE IMAGE HEIGHT */
+@media (max-width: 768px) {
+    .gallery-img {
+        height: 180px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .hero-text-center h1 {
+        font-size: 1.6rem;
+    }
+}
