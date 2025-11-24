@@ -31,19 +31,23 @@ body {
 .popup-container {
   display: flex;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  max-width: 1050px;
-  width: 110%;
+
+  /* ⬆ Increased width and height */
+  max-width: 1200px;
+  width: 90%;
+  min-height: 580px;
+
   overflow: hidden;
   position: relative;
 }
 
+/* CLOSE BUTTON */
 .close-btn {
   position: absolute;
   top: 20px;
   left: 20px;
-  right: auto;
   color: #333;
   cursor: pointer;
   z-index: 1001;
@@ -55,27 +59,29 @@ body {
   stroke-width: 1.5;
 }
 
+.close-btn .close-icon:hover{
+  color: red;
+}
+
+/* TEXT AREA CENTERED */
 .form-section {
-  padding: 60px 80px;
-  flex: 1 1 50%;
+  padding: 40px 70px;
+  flex: 1 1 55%;
+
   display: flex;
   flex-direction: column;
-  align-items: left;
+  justify-content: center; /* ⭐ Perfect center vertically */
+  align-items: flex-start; /* Left aligned */
 }
 
 .form-section h2 {
   margin-top: 5px;
-  font-size: 20px;
+  font-size: 22px;
   color: #333;
 }
 
 .form-section p {
   color: #777;
-  /* margin-bottom: 30px; */
-}
-
-.form-group {
-  /* margin-bottom: 10px; */
 }
 
 .form-group input[type="text"],
@@ -84,15 +90,14 @@ body {
   padding: 8px 0;
   border: none;
   border-bottom: 1px solid #ccc;
-  font-size: 12px;
+  font-size: 13px;
   outline: none;
-  box-sizing: border-box;
   background-color: transparent;
 }
 
 .form-group input::placeholder {
   color: #aaa;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .checkbox-group {
@@ -108,9 +113,9 @@ body {
   margin-right: 10px;
   width: 14px;
   height: 14px;
-  cursor: pointer;
 }
 
+/* BUTTONS */
 .button-group {
   display: flex;
   gap: 10px;
@@ -118,14 +123,12 @@ body {
 }
 
 .button-group button {
-  padding: 8px 30px;
+  padding: 9px 34px;
   border: none;
   border-radius: 20px;
   font-size: 12px;
-  font-weight: medium;
   cursor: pointer;
   transition: background-color 0.3s;
-  /* flex-grow: 1; */
 }
 
 .cancel-btn {
@@ -146,19 +149,23 @@ body {
   background-color: #388e3c;
 }
 
+/* IMAGE SECTION - edges fixed */
 .image-section {
-  flex: 1 1 35%;
-  background-image: url("/Assets/Join\ the\ network\ form\ img.png");
+  flex: 1 1 45%;
+  background-image: url("/Assets/Join the network form img.png");
   background-size: cover;
   background-position: center;
-  min-height: 200px;
-  position: relative;
+  min-height: 100%;
+  height: auto;
 }
 
+/* MOBILE VIEW */
 @media (max-width: 768px) {
   .popup-container {
     flex-direction: column;
     max-width: 95%;
+    width: 95%;
+    min-height: auto;
   }
 
   .form-section {
@@ -185,6 +192,7 @@ body {
   }
 }
 
+/* TRIGGER BUTTON */
 .trigger-button {
   margin-top: 50px;
   padding: 15px 30px;
@@ -195,6 +203,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+
 
 
 
