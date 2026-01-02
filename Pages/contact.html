@@ -49,8 +49,8 @@
                             About us <i class="bi bi-chevron-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Objectives</a></li>
-                            <li><a class="dropdown-item" href="#">Office Bearers</a></li>
+                            <li><a class="dropdown-item" href="/about/objectives.html">Objectives</a></li>
+                            <li><a class="dropdown-item" href="/about/officebears.html">Office Bearers</a></li>
                         </ul>
                     </li>
 
@@ -59,8 +59,8 @@
                             Network <i class="bi bi-chevron-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Join the Network</a></li>
-                            <li><a class="dropdown-item" href="#">Directory</a></li>
+                            <li><a class="dropdown-item" href="/Network/join the network.html">Join the Network</a></li>
+                            <li><a class="dropdown-item" href="/Network/directory.html">Directory</a></li>
                         </ul>
                     </li>
 
@@ -90,8 +90,8 @@
                 About <i class="bi bi-chevron-down"></i>
             </a>
             <div class="collapse ms-2" id="aboutDrop">
-                <a class="mobile-sublink" href="#">Who We Are</a>
-                <a class="mobile-sublink" href="#">Leadership</a>
+                <a class="mobile-sublink" href="/about/objectives.html">Objectives</a>
+                <a class="mobile-sublink" href="/about/officebears.html">Office Bearers</a>
             </div>
 
             <!-- Dropdown 2 -->
@@ -99,14 +99,14 @@
                 Network <i class="bi bi-chevron-down"></i>
             </a>
             <div class="collapse ms-2" id="networkDrop">
-                <a class="mobile-sublink" href="#">USA Chapters</a>
-                <a class="mobile-sublink" href="#">Kerala Chapters</a>
+                <a class="mobile-sublink" href="/Network/join the network.html">Join the Network</a>
+                <a class="mobile-sublink" href="/Network/directory.html">Directory</a>
             </div>
 
             <a class="mobile-link" href="/Pages/events.html">Events <i class="bi bi-arrow-right"></i></a>
             <a class="mobile-link" href="/Pages/gallery.html">Gallery <i class="bi bi-arrow-right"></i></a>
             <a class="mobile-link" href="/Pages/media.html">Media <i class="bi bi-arrow-right"></i></a>
-            <a class="mobile-link active" href="/Pages/contact.html">Contact <i class="bi bi-arrow-right"></i></a>
+            <a class="mobile-link" href="/Pages/contact.html">Contact <i class="bi bi-arrow-right"></i></a>
             <a class="mobile-link" href="#">Login <i class="bi bi-arrow-right"></i></a>
         </div>
     </div>
@@ -116,7 +116,7 @@
 
 
 
-    <section class="akmg-hero">
+    <section class="akmg-hero animate fade-up">
         <img src="/Assets/Contact us.jpg" class="hero-img" alt="AKMG Banner">
         <div class="hero-text-center">
             <h1>Contact Us</h1>
@@ -124,6 +124,100 @@
     </section>
 
 
+
+    <section class="py-2 bg-white">
+        <div class="container py-5">
+
+            <!-- Heading -->
+            <div class="text-center mb-5">
+                <h1 class="semi-bold display-5 mb-3">
+                    Have a question or need assistance?
+                </h1>
+                <p class="text-muted mx-auto" style="max-width:620px;">
+                    Questions, comments, or suggestions? Simply fill in the form and
+                    we’ll be in touch shortly.
+                </p>
+            </div>
+
+            <!-- Content Row -->
+            <div class="row align-items-center">
+
+                <!-- Left: Form -->
+                <div class="col-lg-6 pe-lg-5 mb-5 mb-lg-0">
+                    <h4 class="semi-bold mb-4">Get in Contact!</h4>
+
+                    <form id="contactForm">
+
+                        <div class="mb-4">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control border-0 border-bottom rounded-0" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label">
+                                Email <span class="text-danger">*</span>
+                            </label>
+                            <input type="email" class="form-control border-0 border-bottom rounded-0" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label">Message</label>
+                            <textarea rows="2" class="form-control border-0 border-bottom rounded-0"></textarea>
+                        </div>
+
+                        <!-- BUTTON -->
+                        <button type="submit" class="btn w-100 rounded-pill fw-semibold" style="
+        background:#F15D2A;
+        color:#fff;
+        padding: 10px 0;
+        transition: background 0.3s ease;
+    " onmouseover="this.style.background='#d94f24'" onmouseout="this.style.background='#F15D2A'">
+                            Submit
+                        </button>
+
+
+                    </form>
+                </div>
+
+                <!-- Right: Map -->
+                <div class="col-lg-6">
+                    <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
+                        <iframe src="https://www.google.com/maps?q=Sharjah&output=embed" loading="lazy"
+                            style="border:0;">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const inputs = this.querySelectorAll("input, textarea");
+            const name = inputs[0].value;
+            const email = inputs[1].value;
+            const message = inputs[2].value;
+
+            const subject = encodeURIComponent("Contact Form Enquiry");
+            const body = encodeURIComponent(
+                "Name: " + name +
+                "\nEmail: " + email +
+                "\n\nMessage:\n" + message
+            );
+
+            const gmailURL =
+                "https://mail.google.com/mail/?view=cm&fs=1" +
+                "&to=ebenezerlalu07@gmail.com" +
+                "&su=" + subject +
+                "&body=" + body;
+
+            window.open(gmailURL, "_blank");
+        });
+    </script>
 
 
 
@@ -179,9 +273,9 @@
                         <div class="footer-block">
                             <h6>Quick Links</h6>
                             <ul class="footer-list">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Network</a></li>
+                                <li><a href="/index.html">Home</a></li>
+                                <li><a href="/about/objectives.html">About</a></li>
+                                <li><a href="/Network/directory.html">Network</a></li>
                             </ul>
                         </div>
 
@@ -189,8 +283,8 @@
                         <div class="footer-block">
                             <h6>Quick Links</h6>
                             <ul class="footer-list">
-                                <li><a href="#">Events</a></li>
-                                <li><a href="#">Gallery</a></li>
+                                <li><a href="/Pages/events.html">Events</a></li>
+                                <li><a href="/Pages/gallery.html">Gallery</a></li>
                                 <li><a href="/Pages/media.html">Media</a></li>
                             </ul>
                         </div>
@@ -209,7 +303,7 @@
                         <div class="footer-block">
                             <h6>Contact Us</h6>
                             <p class="footer-text mb-1">+971 8 519 5566</p>
-                            <p class="footer-text mb-0">info@akmgglobal.org</p>
+                            <p class="footer-text mb-0"> info@akmgglobal.org</p>
                         </div>
 
                         <!-- SOCIAL BLOCK (FULL WIDTH on mobile) -->
@@ -236,8 +330,8 @@
                 <div>© Copyright Therapeo Healthcare Consultancy FZ LLC</div>
                 <div class="d-flex gap-4 flex-wrap">
                     <a href="#">All Rights Reserved</a>
-                    <a href="#">Terms and conditions</a>
-                    <a href="#">Cookies Policy</a>
+                    <a href="/Pages/terms.html">Terms and conditions</a>
+                    <a href="/Pages/policy.html">Cookies Policy</a>
                 </div>
             </div>
         </div>
@@ -297,6 +391,11 @@
 
 
 
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 
 </body>
 

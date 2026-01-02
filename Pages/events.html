@@ -49,8 +49,8 @@
                             About us <i class="bi bi-chevron-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Objectives</a></li>
-                            <li><a class="dropdown-item" href="#">Office Bearers</a></li>
+                            <li><a class="dropdown-item" href="/about/objectives.html">Objectives</a></li>
+                            <li><a class="dropdown-item" href="/about/officebears.html">Office Bearers</a></li>
                         </ul>
                     </li>
 
@@ -59,8 +59,8 @@
                             Network <i class="bi bi-chevron-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Join the Network</a></li>
-                            <li><a class="dropdown-item" href="#">Directory</a></li>
+                            <li><a class="dropdown-item" href="/Network/join the network.html">Join the Network</a></li>
+                            <li><a class="dropdown-item" href="/Network/directory.html">Directory</a></li>
                         </ul>
                     </li>
 
@@ -90,8 +90,8 @@
                 About <i class="bi bi-chevron-down"></i>
             </a>
             <div class="collapse ms-2" id="aboutDrop">
-                <a class="mobile-sublink" href="#">Who We Are</a>
-                <a class="mobile-sublink" href="#">Leadership</a>
+                <a class="mobile-sublink" href="/about/objectives.html">Objectives</a>
+                <a class="mobile-sublink" href="/about/officebears.html">Office Bearers</a>
             </div>
 
             <!-- Dropdown 2 -->
@@ -99,11 +99,11 @@
                 Network <i class="bi bi-chevron-down"></i>
             </a>
             <div class="collapse ms-2" id="networkDrop">
-                <a class="mobile-sublink" href="#">USA Chapters</a>
-                <a class="mobile-sublink" href="#">Kerala Chapters</a>
+                <a class="mobile-sublink" href="/Network/join the network.html">Join the Network</a>
+                <a class="mobile-sublink" href="/Network/directory.html">Directory</a>
             </div>
 
-            <a class="mobile-link active" href="/Pages/events.html">Events <i class="bi bi-arrow-right"></i></a>
+            <a class="mobile-link" href="/Pages/events.html">Events <i class="bi bi-arrow-right"></i></a>
             <a class="mobile-link" href="/Pages/gallery.html">Gallery <i class="bi bi-arrow-right"></i></a>
             <a class="mobile-link" href="/Pages/media.html">Media <i class="bi bi-arrow-right"></i></a>
             <a class="mobile-link" href="/Pages/contact.html">Contact <i class="bi bi-arrow-right"></i></a>
@@ -116,7 +116,7 @@
 
 
 
-    <section class="akmg-hero">
+    <section class="akmg-hero animate fade-up">
         <img src="/Assets/Events.jpg" class="hero-img" alt="AKMG Banner">
         <div class="hero-text-center">
             <h1>Events & Happenings</h1>
@@ -124,9 +124,303 @@
     </section>
 
 
+    <!-- Events Section -->
+    <section style="padding:40px 0; position:relative;">
+
+        <div class="custom-container" style="position:relative;">
+
+            <!-- Main Title -->
+            <div class="text-center mb-5 px-3">
+                <h2 class="fw-bold display-4 display-md-3">
+                    44th Annual AKMG Convention
+                </h2>
+                <p class="fs-5 fs-md-4 text-muted mt-2">
+                    Date: 20–22 July, 2023
+                </p>
+            </div>
+
+            <!-- Header Row -->
+            <div class="d-flex align-items-center justify-content-between mb-4 gap-2" style="flex-wrap:nowrap;">
+
+                <h2 style="
+        font-size:clamp(18px,4.5vw,28px);
+        font-weight:600;
+        margin:0;
+        white-space:nowrap;
+    ">
+                    AKMG Events
+                </h2>
+
+                <button id="calendarBtn" style="
+        display:flex;
+        align-items:center;
+        gap:10px;
+        padding:8px 14px;
+        border:none;
+        border-radius:10px;
+        background:#f5f7fa;
+        color:#6b7280;
+        font-size:14px;
+        font-weight:500;
+        cursor:pointer;
+        white-space:nowrap;
+    ">
+                    <span id="selectedDateText">Upcoming Events</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m6 9 6 6 6-6" />
+                    </svg>
+                </button>
+
+            </div>
 
 
+            <!-- Calendar Popup -->
+            <div id="calendarPopup" style="
+            display:none;
+            position:absolute;
+            right:0;
+            top:150px;
+            background:#ffffff;
+            border-radius:16px;
+            width:320px;
+            box-shadow:0 20px 40px rgba(0,0,0,0.15);
+            z-index:999;
+            padding:16px;
+        ">
 
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                    <button onclick="changeMonth(-1)"
+                        style="border:none;background:none;font-size:20px;cursor:pointer;">‹</button>
+                    <strong id="monthYear"></strong>
+                    <button onclick="changeMonth(1)"
+                        style="border:none;background:none;font-size:20px;cursor:pointer;">›</button>
+                </div>
+
+                <div
+                    style="display:grid;grid-template-columns:repeat(7,1fr);text-align:center;font-size:12px;color:#666;">
+                    <div>S</div>
+                    <div>M</div>
+                    <div>T</div>
+                    <div>W</div>
+                    <div>T</div>
+                    <div>F</div>
+                    <div>S</div>
+                </div>
+
+                <div id="calendarDates" style="
+                display:grid;
+                grid-template-columns:repeat(7,1fr);
+                gap:6px;
+                margin-top:8px;
+                text-align:center;
+                font-size:14px;
+            "></div>
+
+                <div style="display:flex;justify-content:space-between;margin-top:14px;">
+                    <button onclick="closeCalendar()" style="border:none;background:none;color:#555;">
+                        Cancel
+                    </button>
+                    <button onclick="closeCalendar()" style="
+                    background:#0d3b8e;
+                    color:#fff;
+                    border:none;
+                    padding:6px 14px;
+                    border-radius:20px;
+                ">
+                        Done
+                    </button>
+                </div>
+            </div>
+
+            <!-- Events Cards -->
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        style="background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,0.08);height:100%;">
+                        <img src="/Assets/banner 1.jpg" style="width:100%; height:220px; object-fit:cover;" alt="">
+                        <div style="padding:22px;">
+                            <p style="font-size:14px;color:#777;margin-bottom:8px;">📅 February 20, 2024</p>
+                            <h5 style="font-weight:700;margin-bottom:10px;">
+                                Lorem Ipsum is simply dummy text
+                            </h5>
+                            <p style="font-size:14px;color:#666;margin:0;">
+                                Lorem Ipsum is simply dummy text of the printing and typeset industry.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        style="background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,0.08);height:100%;">
+                        <img src="/Assets/Banner 2.jpg" style="width:100%; height:220px; object-fit:cover;" alt="">
+                        <div style="padding:22px;">
+                            <p style="font-size:14px;color:#777;margin-bottom:8px;">📅 February 20, 2024</p>
+                            <h5 style="font-weight:700;margin-bottom:10px;">
+                                Lorem Ipsum is simply dummy text
+                            </h5>
+                            <p style="font-size:14px;color:#666;margin:0;">
+                                Lorem Ipsum is simply dummy text of the printing and typeset industry.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        style="background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,0.08);height:100%;">
+                        <img src="/Assets/banner 1.jpg" style="width:100%; height:220px; object-fit:cover;" alt="">
+                        <div style="padding:22px;">
+                            <p style="font-size:14px;color:#777;margin-bottom:8px;">📅 February 20, 2024</p>
+                            <h5 style="font-weight:700;margin-bottom:10px;">
+                                Lorem Ipsum is simply dummy text
+                            </h5>
+                            <p style="font-size:14px;color:#666;margin:0;">
+                                Lorem Ipsum is simply dummy text of the printing and typeset industry.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        style="background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,0.08);height:100%;">
+                        <img src="/Assets/Banner 2.jpg" style="width:100%; height:220px; object-fit:cover;" alt="">
+                        <div style="padding:22px;">
+                            <p style="font-size:14px;color:#777;margin-bottom:8px;">📅 February 20, 2024</p>
+                            <h5 style="font-weight:700;margin-bottom:10px;">
+                                Lorem Ipsum is simply dummy text
+                            </h5>
+                            <p style="font-size:14px;color:#666;margin:0;">
+                                Lorem Ipsum is simply dummy text of the printing and typeset industry.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <br><br>
+            <div class="text-transition">
+                <p class="text-center">
+                    AKMG USA have their annual AKMG convention is scheduled for July 20-22, 2023 in Grand Rapids,
+                    Michigan. An amazing place with a small city vibe, with charm and sophistication that our members
+                    demand.
+                    Please save these dates in your calendars and ensure your attendance and participation...
+                </p>
+
+                <div class="text-center mt-3">
+                    <a href="https://akmg.org/convention2023/" class="btn btn-danger login-btn custom-btn">
+                        Visit Events
+                        <div class="icon-round">
+                            <i data-lucide="arrow-up-right" class="lucide-icon"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Calendar Script -->
+    <script>
+        const btn = document.getElementById("calendarBtn");
+        const popup = document.getElementById("calendarPopup");
+        const datesBox = document.getElementById("calendarDates");
+        const monthYear = document.getElementById("monthYear");
+        const text = document.getElementById("selectedDateText");
+
+        let currentDate = new Date();
+        let selectedDay = null;
+
+        // Toggle calendar
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            popup.style.display = popup.style.display === "block" ? "none" : "block";
+            renderCalendar();
+        });
+
+        // Close calendar
+        function closeCalendar() {
+            popup.style.display = "none";
+        }
+
+        // Render calendar
+        function renderCalendar() {
+            datesBox.innerHTML = "";
+
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+
+            monthYear.innerText = currentDate.toLocaleString("default", {
+                month: "long",
+                year: "numeric"
+            });
+
+            const firstDay = new Date(year, month, 1).getDay();
+            const totalDays = new Date(year, month + 1, 0).getDate();
+
+            // Empty slots
+            for (let i = 0; i < firstDay; i++) {
+                datesBox.innerHTML += `<div></div>`;
+            }
+
+            // Dates
+            for (let d = 1; d <= totalDays; d++) {
+                const isActive = selectedDay === d;
+
+                datesBox.innerHTML += `
+        <div onclick="selectDate(${d})"
+            style="
+                width:38px;
+                height:38px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                margin:auto;
+                border-radius:50%;
+                cursor:pointer;
+                font-size:14px;
+                transition:0.2s;
+                background:${isActive ? '#F15D2A' : 'transparent'};
+                color:${isActive ? '#ffffff' : '#000000'};
+            ">
+            ${d}
+        </div>`;
+            }
+        }
+
+        // Select date
+        function selectDate(day) {
+            selectedDay = day;
+
+            text.innerText =
+                currentDate.toLocaleString("default", { month: "short" }) +
+                " " + day + ", " +
+                currentDate.getFullYear();
+
+            renderCalendar();
+        }
+
+        // Change month
+        function changeMonth(step) {
+            currentDate.setMonth(currentDate.getMonth() + step);
+            selectedDay = null;
+            renderCalendar();
+        }
+
+        // Close when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!popup.contains(e.target) && !btn.contains(e.target)) {
+                popup.style.display = "none";
+            }
+        });
+    </script>
 
 
 
@@ -179,9 +473,9 @@
                         <div class="footer-block">
                             <h6>Quick Links</h6>
                             <ul class="footer-list">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Network</a></li>
+                                <li><a href="/index.html">Home</a></li>
+                                <li><a href="/about/objectives.html">About</a></li>
+                                <li><a href="/Network/directory.html">Network</a></li>
                             </ul>
                         </div>
 
@@ -189,9 +483,9 @@
                         <div class="footer-block">
                             <h6>Quick Links</h6>
                             <ul class="footer-list">
-                                <li><a href="#">Events</a></li>
-                                <li><a href="#">Gallery</a></li>
-                                <li><a href="#">Media</a></li>
+                                <li><a href="/Pages/events.html">Events</a></li>
+                                <li><a href="/Pages/gallery.html">Gallery</a></li>
+                                <li><a href="/Pages/media.html">Media</a></li>
                             </ul>
                         </div>
 
@@ -209,7 +503,7 @@
                         <div class="footer-block">
                             <h6>Contact Us</h6>
                             <p class="footer-text mb-1">+971 8 519 5566</p>
-                            <p class="footer-text mb-0">info@akmgglobal.org</p>
+                            <p class="footer-text mb-0"> info@akmgglobal.org</p>
                         </div>
 
                         <!-- SOCIAL BLOCK (FULL WIDTH on mobile) -->
@@ -236,8 +530,8 @@
                 <div>© Copyright Therapeo Healthcare Consultancy FZ LLC</div>
                 <div class="d-flex gap-4 flex-wrap">
                     <a href="#">All Rights Reserved</a>
-                    <a href="#">Terms and conditions</a>
-                    <a href="#">Cookies Policy</a>
+                    <a href="/Pages/terms.html">Terms and conditions</a>
+                    <a href="/Pages/policy.html">Cookies Policy</a>
                 </div>
             </div>
         </div>
@@ -296,7 +590,11 @@
     </script>
 
 
-
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 
 </body>
 

@@ -14,8 +14,12 @@ body {
   background-color: white;
 }
 
-.semi-bold{
+.semi-bold {
   font-weight: 600;
+}
+
+.white {
+  color: white;
 }
 
 
@@ -23,44 +27,57 @@ body {
    HERO BANNER
 =========================== */
 .akmg-hero {
-    position: relative;
-    width: 100%;
-    height: 55vh;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  overflow: hidden;
+}
+
+.akmg-hero1 {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  overflow: hidden;
+}
+
+.akmg-hero1 .hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .akmg-hero .hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* CENTER TITLE IN MIDDLE */
 .hero-text-center {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    text-align: center;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
 }
 
 .hero-text-center h1 {
-    color: #fff;
-    font-size: 3rem;
-    font-weight: 700;
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* MOBILE HERO */
 @media (max-width: 768px) {
-    .akmg-hero {
-        height: 35vh;
-    }
+  .akmg-hero {
+    height: 35vh;
+  }
 
-    .hero-text-center h1 {
-        font-size: 1.9rem;
-    }
+  .hero-text-center h1 {
+    font-size: 1.9rem;
+  }
 }
 
 
@@ -363,6 +380,7 @@ p {
 .custom-container {
   width: 80%;
   margin: auto;
+
 }
 
 /* Mobile screens */
@@ -1600,5 +1618,329 @@ p {
 @media (max-width: 360px) {
   .footer-block {
     width: 48%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Remove all accordion background colors */
+.accordion-button,
+.accordion-button:not(.collapsed),
+.accordion-item {
+  background-color: transparent !important;
+}
+
+/* Remove Bootstrap default arrow */
+.accordion-button::after {
+  display: none !important;
+}
+
+/* Custom + / × icon */
+.accordion-button {
+  position: relative;
+  padding-right: 50px;
+  box-shadow: none !important;
+  font-size: 18px;
+}
+
+.accordion-button::before {
+  content: "+";
+  position: absolute;
+  right: 0;
+  font-size: 26px;
+  font-weight: 300;
+  color: #274193;
+  transition: 0.2s ease;
+}
+
+.accordion-button:not(.collapsed)::before {
+  content: "×";
+  font-size: 28px;
+}
+
+/* Body text */
+.accordion-body {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Mobile font size */
+@media (max-width: 768px) {
+  .accordion-button {
+    font-size: 16px;
+  }
+}
+
+/* ===============================
+   STEP ICON
+=============================== */
+.step-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #39b54a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 8px rgba(57, 181, 74, 0.15);
+}
+
+/* ===============================
+   IMAGE FIX
+=============================== */
+.join-img {
+  max-height: 420px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ===============================
+   ANIMATION BASE
+=============================== */
+.animate {
+  opacity: 0;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.fade-up {
+  animation-name: fadeUp;
+}
+
+.fade-left {
+  animation-name: fadeLeft;
+}
+
+.fade-right {
+  animation-name: fadeRight;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+/* ===============================
+   KEYFRAMES
+=============================== */
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ===============================
+   MOBILE RESPONSIVE FIX
+=============================== */
+@media (max-width: 768px) {
+
+  .step-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    box-shadow: 0 0 0 5px rgba(57, 181, 74, 0.15);
+  }
+
+  .step-icon+div h5 {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  .step-icon+div p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .animate {
+    animation-delay: 0s !important;
+    animation-duration: 0.6s;
+  }
+
+  .join-img {
+    max-height: 280px;
+  }
+}
+
+
+
+/* STEP ICON */
+.step-icon {
+  width: 42px;
+  height: 42px;
+  background: #2fb36f;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Space between steps */
+.step-item {
+  margin-bottom: 28px;
+}
+
+/* Remove gap after last step */
+.step-item:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Vertical Line */
+.step-item::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 50px;
+  width: 2px;
+  height: calc(100% + 20px);
+  background: #d9f2e4;
+  z-index: 1;
+}
+
+.step-item:last-child::before {
+  display: none;
+}
+
+/* ANIMATIONS */
+.animate {
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.fade-left {
+  animation: fadeLeft 0.8s ease forwards;
+}
+
+.fade-right {
+  animation: fadeRight 0.8s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  animation-delay: 0.4s;
+}
+
+.delay-3 {
+  animation-delay: 0.6s;
+}
+
+.delay-4 {
+  animation-delay: 0.8s;
+}
+
+.delay-5 {
+  animation-delay: 1s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 768px) {
+  .step-item::before {
+    left: 21px;
   }
 }

@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/css/gallery.css">
+    <link rel="stylesheet" href="/css/contact.css">
     <!-- Loader -->
 
 </head>
@@ -45,7 +45,7 @@
                     <li><a class="nav-link " href="/index.html">Home</a></li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link desktop-dropdown pe-2" data-bs-toggle="dropdown">
+                        <a class="nav-link  desktop-dropdown pe-2" data-bs-toggle="dropdown">
                             About us <i class="bi bi-chevron-down"></i>
                         </a>
                         <ul class="dropdown-menu">
@@ -55,7 +55,7 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link desktop-dropdown pe-2" data-bs-toggle="dropdown">
+                        <a class="nav-link active desktop-dropdown pe-2" data-bs-toggle="dropdown">
                             Network <i class="bi bi-chevron-down"></i>
                         </a>
                         <ul class="dropdown-menu">
@@ -64,10 +64,10 @@
                         </ul>
                     </li>
 
-                    <li><a class="nav-link" href="/Pages/events.html">Events</a></li>
-                    <li><a class="nav-link active" href="/Pages/gallery.html">Gallery</a></li>
-                    <li><a class="nav-link" href="/Pages/media.html">Media</a></li>
-                    <li><a class="nav-link" href="/Pages/contact.html">Contact</a></li>
+                    <li><a class="nav-link " href="/Pages/events.html">Events</a></li>
+                    <li><a class="nav-link " href="/Pages/gallery.html">Gallery</a></li>
+                    <li><a class="nav-link " href="/Pages/media.html">Media</a></li>
+                    <li><a class="nav-link " href="/Pages/contact.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -117,176 +117,262 @@
 
 
     <section class="akmg-hero animate fade-up">
-        <img src="/Assets/AKMG Gallery.jpg" class="hero-img" alt="AKMG Banner">
+        <img src="/Assets/directory.jpg" class="hero-img" alt="AKMG Banner">
         <div class="hero-text-center">
-            <h1>AKMG Gallery</h1>
+            <h1>AKMG Global Directory</h1>
         </div>
     </section>
 
-    <section class="custom-container akmg-launch-section py-4">
-        <div>
 
-            <!-- Title -->
-            <h2 class="about-title py-3">
-                <span style="font-weight:400;">AKMG Global Launch –</span>
-                <span style="font-weight:700;"> 14th May, 2023</span>
-            </h2>
+    <section class="py-5 bg-white">
+        <div class="custom-container">
 
-            <!-- Gallery Grid -->
+            <!-- ================= HEADER ================= -->
+            <div class="row align-items-center mb-5 g-4">
+
+                <!-- Title -->
+                <div class="col-lg-6">
+                    <h2 class="about-title mb-2">
+                        AKMG Professionals <span class="fw-bold"> Directory </span>
+                    </h2>
+                    <p class=" mb-0" style="max-width:520px;">
+                        Connect with trusted physicians and healthcare experts worldwide
+                        through the AKMG Professionals Directory
+                    </p>
+                </div>
+
+                <!-- Filters -->
+                <!-- Filters -->
+                <div class="col-lg-6 d-flex justify-content-lg-end gap-2 flex-nowrap">
+
+                    <!-- Department -->
+                    <select class="form-select" style="
+        width:clamp(140px, 45vw, 300px);
+        height:48px;
+        padding:0 40px 0 14px;
+        background-color:#f5f6f8;
+        border:none;
+        font-weight:500;
+        color:#666;
+        background-position:right 14px center;
+        background-size:14px;
+    ">
+                        <option selected>Department</option>
+                        <option>Dental</option>
+                        <option>Cardiology</option>
+                        <option>Neurology</option>
+                    </select>
+
+                    <!-- Country -->
+                    <select class="form-select" style="
+        width:clamp(140px, 45vw, 300px);
+        height:48px;
+        padding:0 40px 0 14px;
+        background-color:#f5f6f8;
+        border:none;
+        font-weight:500;
+        color:#666;
+        background-position:right 14px center;
+        background-size:14px;
+    ">
+                        <option selected>Country</option>
+                        <option>UAE</option>
+                        <option>USA</option>
+                        <option>Oman</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!-- ================= CARDS ================= -->
             <div class="row g-4">
 
                 <!-- Card 1 -->
                 <div class="col-lg-4 col-md-6">
-                    <div style="
-                    background:#fff;
-                    border-radius:12px;
-                    overflow:hidden;
-                    border:1px solid #e5e5e5;
-                    transition:transform .25s ease, box-shadow .25s ease;"
-                        onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.12)'"
-                        onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                    <div class="h-100 p-4 rounded-4 bg-light shadow-sm">
 
-                        <img src="/Assets/Launch of AKMG Global Logo.png" alt=""
-                            style="width:100%; height:300px; object-fit:cover; display:block;">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <img src="https://i.pravatar.cc/80?img=12" class="rounded-circle" width="60" height="60" />
 
-                        <p
-                            style="padding:14px 16px; margin:0; text-align:center; font-size:16px; font-weight:500; color:#333;">
-                            Launch of AKMG Global Logo
+                            <div>
+                                <h5 class="mb-0 fw-semibold">Dr. Jane Antony</h5>
+                                <small class="text-muted">
+                                    Heart Dental Center, Dubai UAE
+                                </small>
+                            </div>
+                        </div>
+
+                        <p class="text-muted small mb-4">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's.
                         </p>
+
+                        <a href="" class="btn btn-danger login-btn custom-btn">
+                            Connect
+                            <div class="icon-round">
+                                <i data-lucide="arrow-up-right" class="lucide-icon"></i>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="col-lg-4 col-md-6">
-                    <div style="background:#fff; border-radius:12px; overflow:hidden; border:1px solid #e5e5e5;
-                    transition:transform .25s ease, box-shadow .25s ease;"
-                        onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.12)'"
-                        onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                    <div class="h-100 p-4 rounded-4 bg-light shadow-sm">
 
-                        <img src="/Assets/Launch video of AKMG Global.png"
-                            style="width:100%; height:300px; object-fit:cover; display:block;">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <img src="https://i.pravatar.cc/80?img=32" class="rounded-circle" width="60" height="60" />
 
-                        <p style="padding:14px 16px; margin:0; text-align:center; font-size:16px; font-weight:500;">
-                            Launch video of AKMG Global
+                            <div>
+                                <h5 class="mb-0 fw-semibold">Dr. Anie Luke</h5>
+                                <small class="text-muted">
+                                    Global Dental Center, Texas, US
+                                </small>
+                            </div>
+                        </div>
+
+                        <p class="text-muted small mb-4">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's.
                         </p>
+
+                        <a href="" class="btn btn-danger login-btn custom-btn">
+                            Connect
+                            <div class="icon-round">
+                                <i data-lucide="arrow-up-right" class="lucide-icon"></i>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="col-lg-4 col-md-6">
-                    <div style="background:#fff; border-radius:12px; overflow:hidden; border:1px solid #e5e5e5;
-                    transition:transform .25s ease, box-shadow .25s ease;"
-                        onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.12)'"
-                        onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                    <div class="h-100 p-4 rounded-4 bg-light shadow-sm">
 
-                        <img src="/Assets/Signing AKMG Logo....jpg"
-                            style="width:100%; height:300px; object-fit:cover; display:block;">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <img src="https://i.pravatar.cc/80?img=56" class="rounded-circle" width="60" height="60" />
 
-                        <p style="padding:14px 16px; margin:0; text-align:center; font-size:16px; font-weight:500;">
-                            Signing AKMG Logo
+                            <div>
+                                <h5 class="mb-0 fw-semibold">Dr. Lienal Jake</h5>
+                                <small class="text-muted">
+                                    Al Damak Medical City, Oman
+                                </small>
+                            </div>
+                        </div>
+
+                        <p class="text-muted small mb-4">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's.
                         </p>
+
+                        <a href="" class="btn btn-danger login-btn custom-btn">
+                            Connect
+                            <div class="icon-round">
+                                <i data-lucide="arrow-up-right" class="lucide-icon"></i>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
 
                 <!-- Card 4 -->
                 <div class="col-lg-4 col-md-6">
-                    <div style="background:#fff; border-radius:12px; overflow:hidden; border:1px solid #e5e5e5;
-                    transition:transform .25s ease, box-shadow .25s ease;"
-                        onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.12)'"
-                        onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                    <div class="h-100 p-4 rounded-4 bg-light shadow-sm">
 
-                        <img src="/Assets/Padma Shri Dr. Azad Moopen.jpg"
-                            style="width:100%; height:300px; object-fit:cover; display:block;">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <img src="https://i.pravatar.cc/80?img=56" class="rounded-circle" width="60" height="60" />
 
-                        <p style="padding:14px 16px; margin:0; text-align:center; font-size:16px; font-weight:500;">
-                            Padma Shri Dr. Azad Moopen
+                            <div>
+                                <h5 class="mb-0 fw-semibold">Dr. Lienal Jake</h5>
+                                <small class="text-muted">
+                                    Al Damak Medical City, Oman
+                                </small>
+                            </div>
+                        </div>
+
+                        <p class="text-muted small mb-4">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's.
                         </p>
+
+                        <a href="" class="btn btn-danger login-btn custom-btn">
+                            Connect
+                            <div class="icon-round">
+                                <i data-lucide="arrow-up-right" class="lucide-icon"></i>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
 
                 <!-- Card 5 -->
                 <div class="col-lg-4 col-md-6">
-                    <div style="background:#fff; border-radius:12px; overflow:hidden; border:1px solid #e5e5e5;
-                    transition:transform .25s ease, box-shadow .25s ease;"
-                        onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.12)'"
-                        onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                    <div class="h-100 p-4 rounded-4 bg-light shadow-sm">
 
-                        <img src="/Assets/Dr. Sunny Kurian, Past President AKMG.jpg"
-                            style="width:100%; height:300px; object-fit:cover; display:block;">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <img src="https://i.pravatar.cc/80?img=32" class="rounded-circle" width="60" height="60" />
 
-                        <p style="padding:14px 16px; margin:0; text-align:center; font-size:16px; font-weight:500;">
-                            Dr. Sunny Kurian
+                            <div>
+                                <h5 class="mb-0 fw-semibold">Dr. Anie Luke</h5>
+                                <small class="text-muted">
+                                    Global Dental Center, Texas, US
+                                </small>
+                            </div>
+                        </div>
+
+                        <p class="text-muted small mb-4">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's.
                         </p>
+
+                        <a href="" class="btn btn-danger login-btn custom-btn">
+                            Connect
+                            <div class="icon-round">
+                                <i data-lucide="arrow-up-right" class="lucide-icon"></i>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
 
                 <!-- Card 6 -->
                 <div class="col-lg-4 col-md-6">
-                    <div style="background:#fff; border-radius:12px; overflow:hidden; border:1px solid #e5e5e5;
-                    transition:transform .25s ease, box-shadow .25s ease;"
-                        onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.12)'"
-                        onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                    <div class="h-100 p-4 rounded-4 bg-light shadow-sm">
 
-                        <img src="/Assets/Dr. Sirajudeen Moideen.jpg"
-                            style="width:100%; height:300px; object-fit:cover; display:block;">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <img src="https://i.pravatar.cc/80?img=12" class="rounded-circle" width="60" height="60" />
 
-                        <p style="padding:14px 16px; margin:0; text-align:center; font-size:16px; font-weight:500;">
-                            Dr. Sirajudeen Moideen
+                            <div>
+                                <h5 class="mb-0 fw-semibold">Dr. Jane Antony</h5>
+                                <small class="text-muted">
+                                    Heart Dental Center, Dubai UAE
+                                </small>
+                            </div>
+                        </div>
+
+                        <p class="text-muted small mb-4">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the industry's.
                         </p>
-                    </div>
-                </div>
 
-                <!-- Card 7 -->
-                <div class="col-lg-4 col-md-6">
-                    <div style="background:#fff; border-radius:12px; overflow:hidden; border:1px solid #e5e5e5;
-                    transition:transform .25s ease, box-shadow .25s ease;"
-                        onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.12)'"
-                        onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                        <a href="" class="btn btn-danger login-btn custom-btn">
+                            Connect
+                            <div class="icon-round">
+                                <i data-lucide="arrow-up-right" class="lucide-icon"></i>
+                            </div>
+                        </a>
 
-                        <img src="/Assets/Dr. Narendra R Kumar.jpg"
-                            style="width:100%; height:300px; object-fit:cover; display:block;">
-
-                        <p style="padding:14px 16px; margin:0; text-align:center; font-size:16px; font-weight:500;">
-                            Dr. Narendra R Kumar
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card 8 -->
-                <div class="col-lg-4 col-md-6">
-                    <div style="background:#fff; border-radius:12px; overflow:hidden; border:1px solid #e5e5e5;
-                    transition:transform .25s ease, box-shadow .25s ease;"
-                        onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.12)'"
-                        onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
-
-                        <img src="/Assets/Dr. Nigil Haroon event pic.jpg"
-                            style="width:100%; height:300px; object-fit:cover; display:block;">
-
-                        <p style="padding:14px 16px; margin:0; text-align:center; font-size:16px; font-weight:500;">
-                            Dr. Nigil Haroon
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card 9 -->
-                <div class="col-lg-4 col-md-6">
-                    <div style="background:#fff; border-radius:12px; overflow:hidden; border:1px solid #e5e5e5;
-                    transition:transform .25s ease, box-shadow .25s ease;"
-                        onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.12)'"
-                        onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
-
-                        <img src="/Assets/Dr. Shamsudeen Moopen.jpg"
-                            style="width:100%; height:300px; object-fit:cover; display:block;">
-
-                        <p style="padding:14px 16px; margin:0; text-align:center; font-size:16px; font-weight:500;">
-                            Dr. Shamsudeen Moopen
-                        </p>
                     </div>
                 </div>
 
             </div>
         </div>
-    </section><br>
+    </section>
+
+
 
 
 
@@ -454,12 +540,12 @@
         });
     </script>
 
+
     <!-- Load Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
     </script>
-
 
 </body>
 
